@@ -1,0 +1,349 @@
+/* General Page Styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #8b0000, #111);
+    color: white;
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: #8b0000;
+    position: relative;
+}
+.navbar h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+/* Navigation container */
+.nav-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    text-align: center;
+    min-width: 12px;
+    transition: background 0.3s ease-in-out;
+}
+
+.nav-item {
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    transition: background 0.3s ease;
+    position: relative;
+}
+
+.nav-item.active {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Active tab effect */
+.nav-links a.active {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+/* Sign-in Button */
+.sign-in {
+    background: #aa4444;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+}
+
+/* Main Content Styling */
+.content {
+    padding: 30px;
+}
+
+/* Filter Bar */
+.filter-bar {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+.filter-btn {
+    background: #aa4444;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    border: none;
+}
+.filter-bar input {
+    padding: 8px;
+    border: 1px solid #700000;
+    background: #222;
+    color: white;
+    border-radius: 5px;
+}
+
+/* Dropdown Styling */
+.dropdown {
+    display: none;
+    position: absolute;
+    background: #333;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+.dropdown button {
+    background: none;
+    border: none;
+    color: white;
+    display: block;
+    padding: 5px;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+}
+
+/* Ranking/Problem Table */
+.ranking-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    table-layout: fixed;
+}
+.ranking-table th, .ranking-table td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #444;
+    box-sizing: border-box;
+}
+.ranking-table th {
+    background: #700000;
+    color: white;
+}
+.ranking-table tr:nth-child(even) {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Problem Links */
+.ranking-table a {
+    color: white;
+}
+
+/* Profile Images */
+.ranking-table img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+/* Mobile Responsive Design */
+@media screen and (max-width: 768px) {
+    /* Hide Desktop Navbar */
+    .nav-links {
+        display: none;
+    }
+
+    /* Mobile Bottom Navigation */
+    .mobile-nav {
+        display: flex;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: #ffffff;
+        justify-content: space-around;
+        border-top: 1px solid #444;
+        justify-content: space-around; /* Distribute icons evenly */
+        height: 40px; /* Adjust this value as needed */
+        padding: 5px 0; /* Reduce padding */
+        align-items: center; /* Centers items vertically */
+    }
+
+    .mobile-nav a {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-decoration: none;
+        padding: 10px;
+        font-size: 14px;
+        color: white;
+        text-decoration: none;
+    }
+    .mobile-nav img {
+        width: 30px;
+        height: 30px;
+        margin-bottom: 1px; /* Space between icon and text */
+    }
+    
+    
+    /* Make table scrollable */
+    .ranking-table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+    
+    /* Adjust filter bar */
+    .filter-bar {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    /* Adjust table cells */
+    .ranking-table th, .ranking-table td {
+        padding: 8px;
+    }
+
+    /* Make images smaller on mobile */
+    .ranking-table img {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* Hide Mobile Nav in Desktop Mode */
+@media screen and (min-width: 769px) {
+    .mobile-nav {
+        display: none !important;
+    }
+}
+/* for cactus problem */
+body.red-black-theme {
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.question-container {
+    text-align: center;
+    margin: 50px auto;
+    max-width: 800px;
+    padding: 20px;
+    border-radius: 10px;
+    background: rgba(255, 0, 0, 0.2); /* Red-transparent effect */
+}
+
+.question-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+.question-text {
+    font-size: 20px;
+    color: white; /* Ensure white text */
+}
+
+.options {
+    list-style-type: none;
+    padding: 0;
+}
+
+.options li {
+    font-size: 18px;
+    color: white; /* White text for options */
+    padding: 10px;
+    border: 1px solid white;
+    display: inline-block;
+    margin: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.options li:hover {
+    background-color: red;
+    color: black;
+}
+.answer-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.answer-container label {
+    font-size: 18px;
+    color: white;
+}
+
+.answer-container input {
+    width: 50%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid white; /* Change to white */
+    background: black;
+    color: white;
+    font-size: 16px;
+    text-align: center;
+}
+
+.answer-container button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.answer-container button:hover {
+    background: darkred;
+}
+
+#feedback {
+    margin-top: 10px;
+    font-size: 18px;
+}
+.upload-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.upload-container label {
+    font-size: 18px;
+    color: white;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.upload-container input {
+    padding: 8px;
+    border: 2px solid white;
+    background: black;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#preview-container {
+    margin-top: 15px;
+}
+
+#solution-preview {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid red;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+/*auth-styles.css*/
+
+
+
+

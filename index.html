@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top 10 Rankings</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="mobile-nav">
+    <a href="home.html">
+        <img src="https://firebasestorage.googleapis.com/v0/b/mentorsmantratestportal1.appspot.com/o/iTHiNK%2Fhome%20(3).png?alt=media&token=af581b7e-6f83-48f8-816e-faa281cf8355" alt="Home">
+        
+    </a>
+    <a href="index.html">
+        <img src="https://firebasestorage.googleapis.com/v0/b/mentorsmantratestportal1.appspot.com/o/iTHiNK%2Ftop-10.png?alt=media&token=54758fe3-13b3-43e0-8097-c2833e4d1d35" alt="Top 10">
+        
+    </a>
+    <a href="problem-set.html">
+        <img src="https://firebasestorage.googleapis.com/v0/b/mentorsmantratestportal1.appspot.com/o/iTHiNK%2Falzheimer.png?alt=media&token=564d4eb7-98c1-4ab2-ac03-5f19d12374ac" alt="Problem Set">
+        
+    </a>
+    <a href="about.html">
+        <img src="https://firebasestorage.googleapis.com/v0/b/mentorsmantratestportal1.appspot.com/o/iTHiNK%2Fid-card.png?alt=media&token=1490aa0c-9e0e-44e8-91b6-673e87eaeaba" alt="About">
+        
+    </a>
+</div>
+    
+    <div class="navbar">
+        <h1>iTHiNK</h1>
+        <div class="nav-links">
+            <a href="home.html" class="nav-item" data-tab="home">Home</a>
+    <a href="index.html" class="nav-item" data-tab="top10">Top 10</a>
+    <a href="problem-set.html" class="nav-item" data-tab="problem-set">Problem Set</a>
+    <a href="about.html" class="nav-item" data-tab="about">About</a>
+        </div>
+        <a href="sign-in.html" class="sign-in">Sign In</a>
+    </div>
+
+    <div class="content">
+        <h2>Top 10</h2>
+
+        <div class="filter-bar">
+            <button class="filter-btn" onclick="toggleDropdown()">Select Date</button>
+            <div class="dropdown" id="dropdown-menu">
+                <button onclick="updateTable('all')">All Time</button>
+                <button onclick="updateTable('week')">This Week</button>
+            </div>
+            <span id="selected-date">Global | This Week</span>
+        </div>
+
+        <table class="ranking-table">
+            <thead>
+                <tr>
+                    <th>Rank</th>
+                    <th>Image</th>
+                    <th>Name</th>
+                    <th>Weeks in Top 10</th>
+                    <th id="rating-header">Rating (This Week)</th>
+                    <th id="problems-header">Problems Solved (This Week)</th>
+                </tr>
+            </thead>
+            <tbody id="ranking-body">
+                <tr>
+                    <td>01</td>
+                    <td><img src="https://firebasestorage.googleapis.com/v0/b/mentorsmantratestportal1.appspot.com/o/iTHiNK%2FNewCandidateImage%20(1).jpg?alt=media&token=902d7e87-21e1-42f2-9a44-63d45fea12fb"></td>
+                    <td>Name 1</td>
+                    <td>1</td>
+                    <td class="rating">822</td>
+                    <td class="problems">27</td>
+                </tr>
+                <tr>
+                    <td>02</td>
+                    <td><img src="https://firebasestorage.googleapis.com/v0/b/mentorsmantratestportal1.appspot.com/o/iTHiNK%2FNewCandidateImage%20(1).jpg?alt=media&token=902d7e87-21e1-42f2-9a44-63d45fea12fb"></td>
+                    <td>Name 2</td>
+                    <td>2</td>
+                    <td class="rating">912</td>
+                    <td class="problems">24</td>
+                </tr>
+                <tr>
+                    <td>03</td>
+                    <td><img src="https://firebasestorage.googleapis.com/v0/b/mentorsmantratestportal1.appspot.com/o/iTHiNK%2FNewCandidateImage%20(1).jpg?alt=media&token=902d7e87-21e1-42f2-9a44-63d45fea12fb"></td>
+                    <td>Name 3</td>
+                    <td>3</td>
+                    <td class="rating">550</td>
+                    <td class="problems">21</td>
+                </tr>
+                <tr>
+                    <td>04</td>
+                    <td><img src="https://firebasestorage.googleapis.com/v0/b/mentorsmantratestportal1.appspot.com/o/iTHiNK%2FNewCandidateImage%20(1).jpg?alt=media&token=902d7e87-21e1-42f2-9a44-63d45fea12fb"></td>
+                    <td>Name 4</td>
+                    <td>4</td>
+                    <td class="rating">322</td>
+                    <td class="problems">32</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="auth-script.js"></script>
+</body>
+</html>

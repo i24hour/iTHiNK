@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cactus Lady Question</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" async src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script type="text/javascript" async 
+        id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+    <script src="script.js" defer></script>
+</head>
+<body class="red-black-theme">
+    <div class="mobile-nav">
+        <a href="home.html">
+            <img src="https://firebasestorage.googleapis.com/v0/b/mentorsmantratestportal1.appspot.com/o/iTHiNK%2Fhome%20(3).png?alt=media&token=af581b7e-6f83-48f8-816e-faa281cf8355" alt="Home">
+            
+        </a>
+        <a href="index.html">
+            <img src="https://firebasestorage.googleapis.com/v0/b/mentorsmantratestportal1.appspot.com/o/iTHiNK%2Ftop-10.png?alt=media&token=54758fe3-13b3-43e0-8097-c2833e4d1d35" alt="Top 10">
+            
+        </a>
+        <a href="problem-set.html">
+            <img src="https://firebasestorage.googleapis.com/v0/b/mentorsmantratestportal1.appspot.com/o/iTHiNK%2Falzheimer.png?alt=media&token=564d4eb7-98c1-4ab2-ac03-5f19d12374ac" alt="Problem Set">
+            
+        </a>
+        <a href="about.html">
+            <img src="https://firebasestorage.googleapis.com/v0/b/mentorsmantratestportal1.appspot.com/o/iTHiNK%2Fid-card.png?alt=media&token=1490aa0c-9e0e-44e8-91b6-673e87eaeaba" alt="About">
+            
+        </a>
+    </div>
+    <div class="question-container">
+        <h1 class="question-title">Mathematics Challenge</h1>
+        <p class="question-text">
+            If \( \sum_{r=1}^{n} T_r = \frac{(2n-1)(2n+1)(2n+3)(2n+5)}{64} \), then 
+            \[
+                \lim_{n \to \infty} \sum_{r=1}^{n} \frac{1}{T_r}
+            \]
+            is equal to:
+        </p>
+        <!-- Input box for final answer -->
+        <div class="answer-container">
+            <label for="final-answer">Enter your final answer:</label>
+            <input type="text" id="final-answer" placeholder="Type your answer here...">
+            <button onclick="submitAnswer()">Submit</button>
+            <p id="feedback"></p>
+        </div>
+        <div class="upload-container">
+            <label for="solution-upload">Upload Your Solution as an Image:</label>
+            <input type="file" id="solution-upload" accept="image/*" onchange="previewSolution()">
+            <div id="preview-container">
+                <img id="solution-preview" src="" alt="Solution Preview" style="display: none;">
+            </div>
+        </div>
+        
+    </div>
+
+</body>
+</html>

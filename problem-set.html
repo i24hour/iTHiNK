@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem Set</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="mobile-nav">
+        <a href="home.html">
+            <img src="https://firebasestorage.googleapis.com/v0/b/mentorsmantratestportal1.appspot.com/o/iTHiNK%2Fhome%20(3).png?alt=media&token=af581b7e-6f83-48f8-816e-faa281cf8355" alt="Home">
+            
+        </a>
+        <a href="index.html">
+            <img src="https://firebasestorage.googleapis.com/v0/b/mentorsmantratestportal1.appspot.com/o/iTHiNK%2Ftop-10.png?alt=media&token=54758fe3-13b3-43e0-8097-c2833e4d1d35" alt="Top 10">
+            
+        </a>
+        <a href="problem-set.html">
+            <img src="https://firebasestorage.googleapis.com/v0/b/mentorsmantratestportal1.appspot.com/o/iTHiNK%2Falzheimer.png?alt=media&token=564d4eb7-98c1-4ab2-ac03-5f19d12374ac" alt="Problem Set">
+            
+        </a>
+        <a href="about.html">
+            <img src="https://firebasestorage.googleapis.com/v0/b/mentorsmantratestportal1.appspot.com/o/iTHiNK%2Fid-card.png?alt=media&token=1490aa0c-9e0e-44e8-91b6-673e87eaeaba" alt="About">
+            
+        </a>
+    </div>
+    <div class="navbar">
+        <h1>iTHiNK</h1>
+        <div class="nav-links">
+            <a href="home.html" class="nav-item" data-tab="home">Home</a>
+    <a href="index.html" class="nav-item" data-tab="top10">Top 10</a>
+    <a href="problem-set.html" class="nav-item" data-tab="problem-set">Problem Set</a>
+    <a href="about.html" class="nav-item" data-tab="about">About</a>
+        </div>
+        <a href="#" class="sign-in">Sign In</a>
+    </div>
+
+    <div class="content">
+        <h2>Problem Set</h2>
+
+        <div class="filter-bar">
+            <input type="number" placeholder="Min Difficulty" id="min-difficulty">
+            <input type="number" placeholder="Max Difficulty" id="max-difficulty">
+            <button class="filter-btn" onclick="applyFilters()">Apply</button>
+        </div>
+
+        <table class="ranking-table">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Rating</th>
+                    <th>Submissions</th>
+                </tr>
+            </thead>
+            <tbody id="problems-body">
+                <tr>
+                    <td>0.2</td>
+                    <td><a href="cactus-question.html" id="cactus-lady">Cactus Lady and her Cing</a></td>
+                    <td>50</td>
+                    <td>x10</td>
+                </tr>
+                <tr>
+                    <td>0.1</td>
+                    <td><a href="#">Kevin and Stones (Hard Version)</a></td>
+                    <td>100</td>
+                    <td>x20</td>
+                </tr>
+                <tr>
+                    <td>00</td>
+                    <td><a href="#">Kevin and Puzzle (Hard Version)</a></td>
+                    <td>500</td>
+                    <td>x22</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
